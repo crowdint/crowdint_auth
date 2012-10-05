@@ -12,6 +12,8 @@ rescue LoadError
   RDoc::Task = Rake::RDocTask
 end
 
+require 'rspec/core/rake_task'
+
 RDoc::Task.new(:rdoc) do |rdoc|
   rdoc.rdoc_dir = 'rdoc'
   rdoc.title    = 'CrowdintAuth'
@@ -20,8 +22,7 @@ RDoc::Task.new(:rdoc) do |rdoc|
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
 
-
-
+RSpec::Core::RakeTask.new :default
 
 Bundler::GemHelper.install_tasks
 
