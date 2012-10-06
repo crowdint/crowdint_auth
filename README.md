@@ -1,5 +1,7 @@
 # CrowdintAuth
 
+[![Build Status](https://secure.travis-ci.org/crowdint/crowdint_auth.png)](http://travis-ci.org/crowdint/crowdint_auth)
+
 Adds the configuration to use Devise with our Crowd Interactive
 Google Apps account for authentication.
 
