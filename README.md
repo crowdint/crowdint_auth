@@ -19,9 +19,9 @@ Run
 
 Devise model needs the following extra fields:
 
-    class AddColumnsToRankitUsers < ActiveRecord::Migration
+    class AddColumnsToUsers < ActiveRecord::Migration
       def change
-        add_column :rankit_users, :provider, :string
+        add_column :users, :provider, :string
         add_column :users, :uid, :string
       end
     end
@@ -45,11 +45,12 @@ will probably look something like:
 
 ### If your user class is named differently
 
-Create your own omniauths controller:
+Create your own omniauth callbacks controller that inherits from
+`CrowdintAuth::OmniauthCallbacksController`:
 
     class Users::OmniauthCallbacksController < CrowdintAuth::OmniauthCallbacksController
       def user_class
-        OtherClassName
+        OtherClass
       end
     end
 
