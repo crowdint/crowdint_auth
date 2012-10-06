@@ -7,13 +7,13 @@ require "crowdint_auth/version"
 Gem::Specification.new do |s|
   s.name        = "crowdint_auth"
   s.version     = CrowdintAuth::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of CrowdintAuth."
-  s.description = "TODO: Description of CrowdintAuth."
+  s.authors     = ["David Padilla"]
+  s.email       = ["david@crowdint.com"]
+  s.homepage    = "https://github.com/dabit/crowdint_auth"
+  s.summary     = "Authenticate Rails apps with CrowdInt's Google Apps and Devise "
+  s.description = "Authenticate Rails apps with CrowdInt's Google Apps and Devise "
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
 
   s.add_dependency "rails", "~> 3.2.8"
   s.add_dependency "devise"
