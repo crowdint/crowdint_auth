@@ -21,8 +21,9 @@ Devise model needs the following extra fields:
 
     class AddColumnsToRankitUsers < ActiveRecord::Migration
       def change
-      add_column :rankit_users, :provider, :string
-      add_column :users, :uid, :string
+        add_column :rankit_users, :provider, :string
+        add_column :users, :uid, :string
+      end
     end
 
 ## Routes
