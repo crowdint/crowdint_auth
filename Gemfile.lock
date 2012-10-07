@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    crowdint_auth (0.0.2)
+    crowdint_auth (0.0.3)
       devise
       omniauth-google-apps
       rails (~> 3.2.8)
