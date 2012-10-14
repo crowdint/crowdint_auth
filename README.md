@@ -28,6 +28,12 @@ Devise model needs the following extra fields:
       end
     end
 
+## Devise
+
+The devise model should include the `:omniauthable` option, for example:
+
+    devise :database_authenticatable, :token_authenticatable, :trackable, :omniauthable
+
 ## Routes
 
 ### If your user class is User
