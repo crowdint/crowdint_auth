@@ -49,7 +49,7 @@ Set up the devise routes:
 The first match will determine the url for the login. That is, your sign in link
 will probably look something like:
 
-    = link_to 'Sign In', google_apps_sign_in
+    = link_to 'Sign In', google_apps_sign_in_path
 
 ### If your user class is named differently
 
@@ -65,7 +65,7 @@ Create your own omniauth callbacks controller that inherits from
 And set it up on routes:
 
     devise_scope :user do
-      match 'google_apps_sign_in', :to => "users/omniauth_callbacks#google_apps_sign_in"
+      get 'google_apps_sign_in', :to => "users/omniauth_callbacks#google_apps_sign_in"
     end
 
     devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
