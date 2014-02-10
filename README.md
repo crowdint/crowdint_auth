@@ -41,7 +41,7 @@ The devise model should include the `:omniauthable` option, for example:
 Set up the devise routes:
 
     devise_scope :user do
-      match 'google_apps_sign_in', :to => "crowdint_auth/omniauth_callbacks#google_apps_sign_in"
+      get 'google_apps_sign_in', :to => "crowdint_auth/omniauth_callbacks#google_apps_sign_in"
     end
 
     devise_for :users, controllers: { omniauth_callbacks: 'crowdint_auth/omniauth_callbacks' }
