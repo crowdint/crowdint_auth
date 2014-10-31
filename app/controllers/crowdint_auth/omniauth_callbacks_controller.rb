@@ -9,10 +9,9 @@ class CrowdintAuth::OmniauthCallbacksController < Devise::OmniauthCallbacksContr
     user_class.create(:email => email, :name => name)
   end
 
-  def google_apps
+  def google_oauth2
     auth_hash = request.env['omniauth.auth']
     email = auth_hash.info['email']
-
     user = user_class.find_by_email(email)
     user ||= create_user_record(email, auth_hash.info['name'])
 
@@ -22,6 +21,6 @@ class CrowdintAuth::OmniauthCallbacksController < Devise::OmniauthCallbacksContr
   end
 
   def google_apps_sign_in
-    redirect_to user_omniauth_authorize_path :google_apps
+    redirect_to user_omniauth_authorize_path :google_oauth2
   end
 end
