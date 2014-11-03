@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 4.0.0"
   s.add_dependency "devise", "~> 3.2.0"
-  s.add_dependency "omniauth-google-apps"
+  s.add_dependency "omniauth-google-oauth2"
 
   s.add_development_dependency 'rspec-rails'
 end
