@@ -16,7 +16,8 @@ class CrowdintAuth::OmniauthCallbacksController < Devise::OmniauthCallbacksContr
     user ||= create_user_record(email, auth_hash.info['name'])
 
     if user.persisted?
-      sign_in_and_redirect user
+      sign_in user
+      redirect_to user
     end
   end
 
